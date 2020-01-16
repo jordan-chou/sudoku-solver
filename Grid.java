@@ -30,6 +30,9 @@
                 constraints.gridx = j;
                 constraints.gridy = i;
                 numbers[i][j] = new JTextField(Integer.toString(num++));
+                numbers[i][j].setEditable(false);
+                numbers[i][j].setPreferredSize(new Dimension(30,30));
+                numbers[i][j].setHorizontalAlignment(JTextField.CENTER);
                 grid.add(numbers[i][j], constraints);
             }
         }
