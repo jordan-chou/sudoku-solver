@@ -6,13 +6,18 @@
  * Defines the class that holds grids and display of grids
  */
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JPanel;
+import javax.swing.BorderFactory;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Color;
 
 public class SudokuPanel {
     private JPanel sudokuPanel;
 
     public SudokuPanel() {
+        JPanel thisGrid;
+
         // Creating panel
         sudokuPanel = new JPanel(new GridBagLayout());
 
@@ -29,7 +34,11 @@ public class SudokuPanel {
                 constraints.gridx = j;
                 constraints.gridy = i;
                 grid[i][j] = new Grid();
-                sudokuPanel.add(grid[i][j].getGrid(), constraints);
+                thisGrid = grid[i][j].getGrid();
+
+                thisGrid.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
+                sudokuPanel.add(thisGrid, constraints);
             }
         }
     }
