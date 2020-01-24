@@ -26,9 +26,15 @@
 
         NumberPad numpad = new NumberPad();
 
+        // Solve Button
         solveButton.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
+
+        // New Game Button
         newgameButton.setPreferredSize(new Dimension(BUTTON_WIDTH+(BUTTON_WIDTH/2), BUTTON_HEIGHT));
+
+        // Quit Button
         quitButton.setPreferredSize(new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT));
+        quitButton.addActionListener(e -> System.exit(0));  // Exit functionality
 
         buttons.add(solveButton);
         buttons.add(newgameButton);
@@ -38,6 +44,7 @@
         buttonPanel.add(numpad.getPanel());
         buttonPanel.setLayout(new GridLayout(2,1));
     }
+
 
     public JPanel getPanel() {
         return buttonPanel;
