@@ -36,7 +36,8 @@
                 constraints.gridy = i;
 
                 // Setting behavior of the square
-                numbers[i][j] = new JTextField(Integer.toString(num++));
+                //numbers[i][j] = new JTextField(Integer.toString(num++));
+                numbers[i][j] = new JTextField();
                 numbers[i][j].setEditable(false);
                 numbers[i][j].setPreferredSize(new Dimension(30,30));
                 numbers[i][j].setHorizontalAlignment(JTextField.CENTER);
