@@ -34,7 +34,7 @@ class SudokuSolver {
         frame.getContentPane().add(gameBoard);
         frame.getContentPane().add(rightPanel);
         frame.setLayout(new GridLayout(1,2));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(800, 400);
         frame.setVisible(true);
     }
